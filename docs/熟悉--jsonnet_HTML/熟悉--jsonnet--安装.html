@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>安装</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>安装</h1><br/><br /><br />github项目地址<br /><a href="https://github.com/google/jsonnet">https://github.com/google/jsonnet</a><br /><br /><br />环境：CentOS7<br /><br />使用C版本的jsonnet，不要使用GO或者Python提供的，不知道为什么GO或者Python去跑测试的时候，都不通过<br /><br /><div class="codebox"><div class="codebox"><span style="color:#0088ff;font-weight:400">#cd&nbsp;/usr/local/src/</span><br /><br /><span style="color:#0088ff;font-weight:400">#git&nbsp;clone&nbsp;-b&nbsp;v0.17.0&nbsp;https://github.com/google/jsonnet.git</span><br /><br /><span style="color:#0088ff;font-weight:400">#cd&nbsp;jsonnet</span><br /><br /><span style="color:#0088ff;font-weight:400">#yum&nbsp;install&nbsp;-y&nbsp;gcc&nbsp;gcc-c++</span><br /><br /><span style="color:#0088ff;font-weight:400">#make</span><br /><br /><span style="color:#0088ff;font-weight:400">#vim&nbsp;/etc/profile</span><br />末尾添加<br /><span style="color:#ff9d00;font-weight:700">export</span> <span style="color:#7f0044;font-weight:400">JSONNET_HOME</span>=<span style="color:#ff9d00;font-weight:700">/</span>usr<span style="color:#ff9d00;font-weight:700">/</span>local<span style="color:#ff9d00;font-weight:700">/</span>src<span style="color:#ff9d00;font-weight:700">/</span>jsonnet<br /><span style="color:#ff9d00;font-weight:700">export</span> <span style="color:#7f0044;font-weight:400">PATH</span>=<span style="color:#7f0044;font-weight:400">$JSONNET_HOME</span><span style="color:#ff9d00;font-weight:700">:</span><span style="color:#7f0044;font-weight:400">$PATH</span></div></div></div>
+</body>
+</html>
