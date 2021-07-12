@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>python API</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>python API</h1><br/><h3>可以在Python中调用</h3><br /><br />示例代码<br /><br /><div class="codebox"><div class="codebox"><span style="color:#333333;font-weight:400">import</span>&nbsp;json<br /><span style="color:#333333;font-weight:400">import</span>&nbsp;_jsonnet<br /><br />jsonnet_str&nbsp;=&nbsp;<span style="color:#3ad900;font-weight:400">&#39;&#39;&#39;<br />{<br />&nbsp;&nbsp;person1:&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;&quot;Alice&quot;,<br />&nbsp;&nbsp;&nbsp;&nbsp;welcome:&nbsp;&quot;Hello&nbsp;&quot;&nbsp;+&nbsp;self.name&nbsp;+&nbsp;&quot;!&quot;,<br />&nbsp;&nbsp;},<br />&nbsp;&nbsp;person2:&nbsp;self.person1&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;std.extVar(&quot;OTHER_NAME&quot;),<br />&nbsp;&nbsp;},<br />}<br />&#39;&#39;&#39;</span><br /><br />json_str&nbsp;=&nbsp;_jsonnet.evaluate_snippet(<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#3ad900;font-weight:400">&quot;snippet&quot;</span>,&nbsp;jsonnet_str,<br />&nbsp;&nbsp;&nbsp;&nbsp;ext_vars={<span style="color:#3ad900;font-weight:400">&#39;OTHER_NAME&#39;</span>:&nbsp;<span style="color:#3ad900;font-weight:400">&#39;Bob&#39;</span>})<br /><br />json_obj&nbsp;=&nbsp;json.loads(json_str)<br /><span style="color:#ff9d00;font-weight:700">for</span>&nbsp;person_id,&nbsp;person&nbsp;<span style="color:#ff9d00;font-weight:700">in</span>&nbsp;json_obj.iteritems():<br />&nbsp;&nbsp;<span style="color:#ff9d00;font-weight:700">print</span>&nbsp;<span style="color:#3ad900;font-weight:400">&#39;%s&nbsp;is&nbsp;%s,&nbsp;greeted&nbsp;by&nbsp;&quot;%s&quot;&#39;</span>&nbsp;%&nbsp;(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;person_id,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;person[<span style="color:#3ad900;font-weight:400">&#39;name&#39;</span>],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;person[<span style="color:#3ad900;font-weight:400">&#39;welcome&#39;</span>])</div></div></div>
+</body>
+</html>

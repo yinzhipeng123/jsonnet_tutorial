@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>for循环遍历</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>for循环遍历</h1><br/><h3>for循环</h3><br /><br /><br /><div class="codebox"><div class="codebox">[root@centos7&nbsp;jsonnet_learn]#&nbsp;<span style="color:#ff9d00;font-weight:700">cat</span>&nbsp;test.jsonnet&nbsp;<br /><span style="color:#ff9d00;font-weight:700">local</span>&nbsp;arr&nbsp;=&nbsp;std.range<span style="color:#ff9d00;font-weight:700">(</span>5,&nbsp;8<span style="color:#ff9d00;font-weight:700">);</span><br /><span style="color:#ff9d00;font-weight:700">{</span>higher<span style="color:#ff9d00;font-weight:700">:</span>&nbsp;[&nbsp;x&nbsp;<span style="color:#ff9d00;font-weight:700">for</span>&nbsp;<span style="color:#7f0044;font-weight:400">x</span>&nbsp;<span style="color:#ff9d00;font-weight:700">in</span>&nbsp;arr]<span style="color:#ff9d00;font-weight:700">}</span><br />[root@centos7&nbsp;jsonnet_learn]#&nbsp;jsonnet&nbsp;test.jsonnet&nbsp;<br /><span style="color:#ff9d00;font-weight:700">{</span><br />&nbsp;&nbsp;&nbsp;<span style="color:#3ad900;font-weight:400">&quot;higher&quot;</span><span style="color:#ff9d00;font-weight:700">:</span>&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8<br />&nbsp;&nbsp;&nbsp;]<br /><span style="color:#ff9d00;font-weight:700">}</span></div></div></div>
+</body>
+</html>
